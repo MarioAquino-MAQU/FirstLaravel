@@ -146,13 +146,13 @@ return [
         // or 'db2_ibmi_ibm' / 'db2_zos_odbc' / 'db2_expressc_odbc
         'driverName' => '{IBM i Access ODBC Driver}',
         // or '{iSeries Access ODBC Driver}' / '{IBM i Access ODBC Driver 64-bit}'
-        'host' => env('DB_HOST', '127.0.0.1'),
+        'host' => env('DB_HOST'),
         'username' => env('DB_USERNAME', 'user'),
         'password' => env('DB_PASSWORD', 't'),
         'database' => env('DB_DATABASE', 'idk'),
         'prefix' => '',
         'schema' => 'default schema',
-        'port' => 50000,
+        'port' => env('DB_PORT', '50000'),
         'date_format' => 'Y-m-d H:i:s',
         // or 'Y-m-d H:i:s.u' / 'Y-m-d-H.i.s.u'...
         'odbc_keywords' => [
@@ -207,15 +207,15 @@ return [
             'TRACEFILENAME' => '',
             'ExtendedColInfo' => 0,
         ],
-//        'options' => [
-//            PDO::ATTR_CASE => PDO::CASE_LOWER,
-//            PDO::ATTR_PERSISTENT => false,
-//            PDO::I5_ATTR_DBC_SYS_NAMING => false,
-//            PDO::I5_ATTR_COMMIT => PDO::I5_TXN_NO_COMMIT,
-//            PDO::I5_ATTR_JOB_SORT => false,
-//            PDO::I5_ATTR_DBC_LIBL => '',
-//            PDO::I5_ATTR_DBC_CURLIB => '',
-//        ]
+        'options' => [
+            PDO::ATTR_CASE => PDO::CASE_LOWER,
+            PDO::ATTR_PERSISTENT => false,
+            PDO::I5_ATTR_DBC_SYS_NAMING => false,
+            PDO::I5_ATTR_COMMIT => PDO::I5_TXN_NO_COMMIT,
+            PDO::I5_ATTR_JOB_SORT => false,
+            PDO::I5_ATTR_DBC_LIBL => '',
+            PDO::I5_ATTR_DBC_CURLIB => '',
+        ]
     ],
 
 ];
