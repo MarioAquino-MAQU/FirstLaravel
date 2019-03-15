@@ -8,5 +8,6 @@
 @endsection
 
 @section('content')
+<p>een zin als parameter</p>
     <p>Dit is een homepage met een beschrijving</p>
 @endsection
