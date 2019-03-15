@@ -151,7 +151,7 @@ return [
         'password' => env('DB_PASSWORD', 't'),
         'database' => env('DB_DATABASE', 'idk'),
         'prefix' => '',
-        'schema' => 'default schema',
+        'schema' => 'STAGEMARIO',
         'port' => env('DB_PORT', '50000'),
         'date_format' => 'Y-m-d H:i:s',
         // or 'Y-m-d H:i:s.u' / 'Y-m-d-H.i.s.u'...
